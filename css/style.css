@@ -60,7 +60,6 @@ background-size: cover;
 opacity: 1;
 
 }
-
 .hero-banner h2{
   background-color: cornflowerblue;
   padding: 5px 15px 5px 15px;
@@ -71,13 +70,84 @@ opacity: 1;
   position: relative;
   top: 150px;
 }
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
+
+.page-wrapper{
+  padding: 25px 50px 0px 50px;
+  background-color: rgb(222, 233, 255)
 }
 
-p {
-  margin: 0;
+.grid{
+  display: grid;
+  margin: 0px 5%;
+  min-height: 500px;
+  height: 70vh;
+  grid-template-columns: 1fr 4fr 4fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas: 
+  "about-me-title about-me-content about-me-content"
+  "my-work-title my-work-mainfeature my-work-mainfeature"
+  "my-work-title my-work-mainfeature my-work-mainfeature"
+  "my-work-title my-work-side1 my-work-side2"
+  "my-work-title my-work-side3 my-work-side4"
+  "contact-me-title contact-me-info contact-me-info";
+  
+}
+
+#about-me-title{
+  grid-area: about-me-title;
+  font-size: 40px;
+  padding-right: 25px;
+  text-align: right;
+  border-right: 5px solid grey;
+  margin-right: 35px;
+  margin-bottom: 30px;
+}
+
+#about-me-content{
+  grid-area: about-me-content;
+}
+#my-work-title{
+  grid-area: my-work-title;
+  font-size: 25px;
+  padding-right: 25px;
+  text-align: right;
+  border-right: 5px solid grey;
+  margin-right: 35px;
+  margin-bottom: 30px;
+
+} 
+#my-work-mainfeature{
+  grid-area: my-work-mainfeature;
+  background-image: url(../images/02-run-buddy.jpg);
+}
+#my-work-side1{
+  grid-area: my-work-side1;
+  background-image: url(../images/02-portfolio-1.jpg);
+}
+#my-work-side2{
+  grid-area: my-work-side2;
+  background-image: url(../images/02-portfolio-2.jpg);
+}
+
+#my-work-side3{
+  grid-area: my-work-side3;
+  background-image: url(../images/02-portfolio-3.jpg);
+}
+#my-work-side4{
+  grid-area: my-work-side4;
+  background-image: url(../images/02-portfolio-4.jpg);
+}
+
+#contact-me-title{
+  grid-area: contact-me-title;
+  font-size: 25px;
+  padding-right: 25px;
+  text-align: right;
+  border-right: 5px solid grey;
+  margin-right: 35px;
+  margin-bottom: 30px;
+}
+
+#contact-me-info{
+  grid-area: contact-me-info;
 }
