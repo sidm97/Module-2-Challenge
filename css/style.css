@@ -33,13 +33,13 @@ ul{
   list-style-type: none;
 }
 
-li{
+nav li{
   display: inline-block;
   margin-left: 40px;
   border-bottom: solid 3px rgb(0, 185, 185);
 }
 
-a{
+nav a{
 text-decoration: none;
 color: rgb(0, 185, 185);
 }
@@ -72,25 +72,26 @@ opacity: 1;
 }
 
 .page-wrapper{
-  padding: 25px 50px 0px 50px;
+  padding: 0px 50px 0px 50px;
   background-color: rgb(222, 233, 255)
 }
 
 .grid{
   display: grid;
   margin: 0px 5%;
-  min-height: 500px;
-  height: 70vh;
+  padding-top: 15px;
+  min-height: 800px;
+  height: 100vh;
   grid-template-columns: 1fr 4fr 4fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-areas: 
   "about-me-title about-me-content about-me-content"
+  "my-work-title my-work-mainfeature my-work-mainfeature"
   "my-work-title my-work-mainfeature my-work-mainfeature"
   "my-work-title my-work-mainfeature my-work-mainfeature"
   "my-work-title my-work-side1 my-work-side2"
   "my-work-title my-work-side3 my-work-side4"
   "contact-me-title contact-me-info contact-me-info";
-  
 }
 
 #about-me-title{
@@ -100,11 +101,14 @@ opacity: 1;
   text-align: right;
   border-right: 5px solid grey;
   margin-right: 35px;
-  margin-bottom: 30px;
+  padding-bottom: 15px;
+  padding-top: 15px;
 }
 
 #about-me-content{
   grid-area: about-me-content;
+  padding-top: 15px;
+
 }
 #my-work-title{
   grid-area: my-work-title;
@@ -113,29 +117,68 @@ opacity: 1;
   text-align: right;
   border-right: 5px solid grey;
   margin-right: 35px;
-  margin-bottom: 30px;
+  margin-top: 15px;
+  padding-bottom: 15px;
+  padding-top: 15px;
+margin-bottom: 15px;
 
 } 
 #my-work-mainfeature{
   grid-area: my-work-mainfeature;
-  background-image: url(../images/02-run-buddy.jpg);
+   background-image: url(../images/02-portfolio-4.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  border: solid 5px skyblue;
+  background-position: center;
+  margin-top: 15px;
 }
 #my-work-side1{
   grid-area: my-work-side1;
   background-image: url(../images/02-portfolio-1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  border: solid 5px skyblue;
+  background-position: center;
+
+
 }
 #my-work-side2{
   grid-area: my-work-side2;
   background-image: url(../images/02-portfolio-2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  border: solid 5px skyblue;
+  background-position: center;
+
+
 }
 
 #my-work-side3{
   grid-area: my-work-side3;
   background-image: url(../images/02-portfolio-3.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  border: solid 5px skyblue;
+  background-position: center;
+  margin-bottom: 15px;
+
+
 }
 #my-work-side4{
   grid-area: my-work-side4;
-  background-image: url(../images/02-portfolio-4.jpg);
+  background-image: url(../images/02-run-buddy.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  border: solid 5px skyblue;
+  background-position: center;
+  margin-bottom: 15px;
+
+
 }
 
 #contact-me-title{
@@ -146,8 +189,53 @@ opacity: 1;
   border-right: 5px solid grey;
   margin-right: 35px;
   margin-bottom: 30px;
+  margin-top: 15px;
 }
 
 #contact-me-info{
   grid-area: contact-me-info;
+display: flex;
+align-items: center;
+justify-content: center;
+text-decoration: none;
+
+}
+
+li{
+  display: inline-block;
+  margin-left: 60px;
+  margin-right: 60px;
+  border-bottom: solid 3px rgb(0, 185, 185);
+  font-size: 20px;
+}
+
+a{
+  text-decoration: none;
+color: black;
+}
+
+h3{
+  color: white;
+  font-size: 20px;
+  display: inline;
+  background-color: skyblue;
+  position: relative;
+  bottom: -60%;
+  padding: 5px 10px 5px 20px;
+}
+
+#my-work-mainfeature h3{
+  color: white;
+  font-size: 25px;
+  display: inline;
+  background-color: skyblue;
+  position: relative;
+  bottom: -85%;
+  padding: 5px 10px 5px 25px;
+
+}
+
+.work-grid-section{
+  margin: 8px 5px;
+  display: inline-block;
 }
